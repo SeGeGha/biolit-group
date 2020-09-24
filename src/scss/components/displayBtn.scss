@@ -1,0 +1,9 @@
+.display-btn {
+  font-size: 1.125rem;
+  color: $additional-text-color;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $additional-text-color;
+  font-weight: bold;
+
+  @include size(240px, 62px);
+}

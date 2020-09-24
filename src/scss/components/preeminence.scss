@@ -1,0 +1,40 @@
+.preeminence-group {
+  list-style: none;
+
+  @include flex(row);
+
+  &__item {
+    position: relative;
+    margin-right: 1.77rem;
+    padding: 0.3125rem 0;
+    flex-basis: 16%;
+    white-space: nowrap;
+
+    &__icon {
+      float: left;
+      margin: 0.3125rem 1.25rem 0.3125rem 0;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    &__title,
+    &__description {
+      margin-left: 3.875rem;
+    }
+
+    &__title {
+      margin-bottom: 0.625rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 3.25rem;
+      height: 100%;
+      border-right: 1px solid;
+      content: '';
+    }
+  }
+}

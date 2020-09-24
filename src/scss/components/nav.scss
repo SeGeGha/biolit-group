@@ -1,0 +1,19 @@
+.navigation-group {
+  list-style: none;
+  font-size: 1.5rem;
+
+  @include flex(row);
+
+  &__item {
+    display: inline-flex;
+
+    a {
+      padding: 1.8rem 1.55rem;
+      ;
+    }
+  }
+}
+
+.item--actived {
+  color: $menu-link-active-color;
+}

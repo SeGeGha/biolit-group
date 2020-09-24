@@ -1,0 +1,29 @@
+#about-us {
+  padding: 12.875rem 0 2.625rem;
+  background: url('../assets/img/apartment-apartment-building-architecture-building-323705.jpg') 0% 83.5%;
+
+  .text-container {
+    position: relative;
+    width: 40%;
+    margin-bottom: 6.8rem;
+    margin-left: 8.125rem;
+    padding: 1.975rem 0.625rem;
+
+    &__title {
+      margin-bottom: 1.35rem;
+    }
+
+    &__description {
+      font-size: 1.125rem;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0.625rem;
+      width: 35%;
+      border-bottom: 2px solid;
+      content: '';
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.gallery {
+
+  @include flex(row, center, center, wrap);
+
+  &__image {
+    display: flex;
+    margin: 0.625rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}

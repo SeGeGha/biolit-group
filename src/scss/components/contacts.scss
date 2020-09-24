@@ -1,0 +1,15 @@
+.contacts {
+
+  @include flex(row, center, center, wrap);
+
+  &__icon {
+    margin-right: 2rem;
+  }
+
+  &__number {
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 1.8em;
+    white-space: nowrap;
+  }
+}

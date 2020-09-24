@@ -1,0 +1,21 @@
+.grid {
+
+  @include flex(row, stretch, stretch, wrap);
+
+  &__column {
+    display: flex;
+    width: 50%;
+
+    a {
+      font-size: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      padding: 5.8rem 9.4rem;
+    }
+  }
+}
