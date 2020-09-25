@@ -2,7 +2,7 @@
   list-style: none;
   color: $light-text-color;
 
-  @include flex(row);
+  @include flex(row, stretch, stretch, wrap);
 
   &__item {
     padding: 0 0.625rem;

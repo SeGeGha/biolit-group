@@ -6,7 +6,7 @@
   .inner-wrapper {
     padding-bottom: 0.5rem;
 
-    @include flex(row, center, space-between, wrap);
+    @include flex(row, center, space-between);
   }
 
   .logo {
@@ -35,6 +35,25 @@
     &-group {
       max-width: $desktop-content-max-width;
       margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #header .timetable {
+    margin-left: 5%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header .inner-wrapper {
+    flex-direction: column;
+
+    img.logo,
+    .timetable,
+    .contacts {
+      margin: 0.5rem;
     }
   }
 }
