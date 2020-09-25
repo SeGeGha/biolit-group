@@ -40,13 +40,15 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   #header .timetable {
-    margin-left: 5%;
     justify-content: center;
+    margin-left: 5%;
   }
 }
 
 @media screen and (max-width: 767px) {
+
   #header .inner-wrapper {
     flex-direction: column;
 

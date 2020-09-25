@@ -20,9 +20,9 @@ $transition: all 0.3s;
 
 .item--hidden {
   position: relative;
-  font-size: 0;
-  padding-top: 5.1rem;
   width: $line-width;
+  padding-top: 5.1rem;
+  font-size: 0;
   cursor: pointer;
 
   a {
@@ -32,17 +32,17 @@ $transition: all 0.3s;
   &::before,
   &::after {
     position: absolute;
-    background-color: $copyright-bg-color;
-    content: '';
     top: 2.2rem;
     left: 0.6rem;
+    background-color: $copyright-bg-color;
+    content: '';
 
     @include size(100%, ($line-width * 0.1));
   }
 
   &::after {
-    width: 60%;
     top: 2.8rem;
+    width: 60%;
   }
 }
 
@@ -97,6 +97,7 @@ $transition: all 0.3s;
 }
 
 @media screen and (max-width: 1024px) {
+
   .navigation-group {
     display: none;
   }
@@ -106,6 +107,7 @@ $transition: all 0.3s;
   }
 
   .navigation--actived {
+
     .navigation-btn__line {
       transition: $transition 0.1s;
 

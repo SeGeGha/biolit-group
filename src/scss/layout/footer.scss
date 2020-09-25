@@ -14,11 +14,12 @@
 
     &-wrapper {
       padding-bottom: 0.6rem;
+
       @include flex(row, flex-end, center);
 
       span {
-        font-size: 1.375rem;
         margin-left: 1.5rem;
+        font-size: 1.375rem;
       }
     }
   }
@@ -46,9 +47,9 @@
 
 
   .grid {
-    font-size: 0.875rem;
-    margin-bottom: 2.25rem;
     width: 85%;
+    margin-bottom: 2.25rem;
+    font-size: 0.875rem;
 
     &__column {
       flex: 1 1 (100% /3);
@@ -66,13 +67,16 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   #footer .inner-wrapper {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 767px) {
+
   #footer {
+
     .inner-wrapper {
       flex-direction: column;
 
@@ -88,8 +92,8 @@
       align-items: center;
 
       span {
-        text-align: center;
         margin-left: 0;
+        text-align: center;
       }
     }
 
@@ -98,8 +102,8 @@
     }
 
     .grid {
-      width: 100%;
       flex-wrap: wrap;
+      width: 100%;
     }
   }
 }

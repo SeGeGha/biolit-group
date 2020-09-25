@@ -3,9 +3,9 @@
   @include flex(row, center, center, wrap);
 
   &__image {
+    display: flex;
     flex-grow: 1;
     max-width: 400px;
-    display: flex;
     margin: 0.625rem;
 
     img {
@@ -15,6 +15,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .gallery__image {
     margin: 0.625rem 0;
   }
