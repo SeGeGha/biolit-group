@@ -1,19 +1,31 @@
 #footer {
-  padding: 2rem 0;
+  padding-top: 2rem;
 
   .inner-wrapper {
 
     @include flex(row, center, space-between, wrap);
   }
 
+  .timetable {
+    margin-left: 13%;
+  }
+
   .logo {
-    width: 85%;
-    margin-top: -0.6rem;
+
+    &-wrapper {
+      padding-bottom: 0.6rem;
+      @include flex(row, flex-end, center);
+
+      span {
+        font-size: 1.375rem;
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   .navigation-menu {
     width: 100%;
-    margin: 1rem 0 1.8rem;
+    margin: 2.5rem 0 3.4rem;
   }
 
   .navigation-group {
@@ -22,7 +34,7 @@
     &__item {
 
       a {
-        padding: 1.8rem 1.9rem;
+        padding: 0.3rem 1.9rem;
       }
 
       &:first-child a {
@@ -31,38 +43,20 @@
     }
   }
 
+
   .grid {
-    width: 100%;
-    margin-bottom: 2.3rem;
     font-size: 0.875rem;
+    margin-bottom: 2.25rem;
+    width: 85%;
 
     &__column {
-      width: 25%;
-      padding: 0;
-
-      li {
-        position: relative;
-        margin-bottom: 14px;
-        padding-left: 0.7rem;
-        list-style: none;
-
-        &::after {
-          position: absolute;
-          top: calc(50% - 1.5px);
-          left: 0;
-          background-color: $main-text-color;
-          border-radius: 50%;
-          content: '';
-
-          @include size(3px);
-        }
-      }
+      flex: 1 1 (100% /3);
     }
   }
 
   .copyright {
     width: 100%;
-    padding: 1.6rem 0.625rem;
+    padding: 1.7rem 0.625rem;
     font-size: 0.75rem;
     text-align: center;
     color: $additional-text-color;

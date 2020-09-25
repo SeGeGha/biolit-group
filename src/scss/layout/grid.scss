@@ -1,21 +1,80 @@
 .grid {
+  width: 100%;
 
   @include flex(row, stretch, stretch, wrap);
+}
 
-  &__column {
-    display: flex;
-    width: 50%;
+.grid-2-column .grid__column {
+  flex: 1 1 50%;
 
-    a {
-      font-size: 0;
+  @include flex(column, flex-start, center);
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    font-size: 0;
+  }
+
+  p~a {
+    font-size: 1rem;
+    color: $menu-link-active-color;
+    font-weight: bold;
+    margin-top: 1.6rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(50% - 8px);
+      right: -2.2rem;
+      background: url("../assets/icon/information.svg");
+      @include size(12px, 16px);
     }
+  }
 
-    img {
-      width: 100%;
+  p+a {
+    margin-top: 2.1rem;
+
+    &::after {
+      right: -2rem;
+      background: url("../assets/icon/edit.svg");
     }
+  }
 
-    &:nth-child(2) {
-      padding: 5.8rem 9.4rem;
+  &:nth-child(2) {
+    padding: 1rem 7.7%;
+  }
+
+  &:nth-child(3) {
+    background: url('../assets/img/text_block_2.jpg');
+    background-size: cover;
+    color: $additional-text-color;
+    padding: 1rem 6% 1rem 14.1%;
+
+    p:last-child {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.grid-3-column .grid__column {
+  li {
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 0.7rem;
+    list-style: none;
+
+    &::after {
+      position: absolute;
+      top: calc(50% - 1.5px);
+      left: 0;
+      background-color: $main-text-color;
+      border-radius: 50%;
+      content: '';
+
+      @include size(3px);
     }
   }
 }
