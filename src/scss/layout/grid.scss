@@ -1,3 +1,5 @@
+$dot-size: 3px;
+
 .grid {
   width: 100%;
 
@@ -60,9 +62,11 @@
 }
 
 .grid-3-column .grid__column {
+  min-width: 300px;
+
   li {
     position: relative;
-    margin-bottom: 14px;
+    margin-bottom: 0.875rem;
     padding-left: 0.7rem;
     list-style: none;
 
@@ -74,7 +78,7 @@
       border-radius: 50%;
       content: '';
 
-      @include size(3px);
+      @include size($dot-size);
     }
   }
 }

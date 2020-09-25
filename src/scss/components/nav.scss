@@ -7,7 +7,7 @@ $transition: all 0.3s;
   list-style: none;
   font-size: 1.5rem;
 
-  @include flex(row, stretch, space-evenly, wrap);
+  @include flex(row, stretch, flex-start, wrap);
 
   &__item {
     display: inline-flex;
@@ -55,6 +55,7 @@ $transition: all 0.3s;
 }
 
 .navigation-btn {
+  display: none;
   margin: 0 auto;
   overflow: hidden;
   cursor: pointer;
@@ -98,6 +99,10 @@ $transition: all 0.3s;
 @media screen and (max-width: 1024px) {
   .navigation-group {
     display: none;
+  }
+
+  .navigation-btn {
+    display: block;
   }
 
   .navigation--actived {
