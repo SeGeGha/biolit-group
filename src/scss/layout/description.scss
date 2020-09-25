@@ -11,3 +11,16 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #description {
+    padding: 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #description .inner-wrapper>p {
+    width: 100%;
+    text-align: justify;
+  }
+}

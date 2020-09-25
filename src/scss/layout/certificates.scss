@@ -8,8 +8,12 @@
   }
 
   .gallery {
-    width: max-content;
+    width: 100%;
     margin: 3.2rem auto 2.65rem;
+
+    &__image {
+      max-width: 260px;
+    }
   }
 
 }

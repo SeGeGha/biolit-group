@@ -5,3 +5,15 @@
     padding: 0.625rem 0;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #company-life {
+    padding: 2.0rem 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #company-life {
+    padding: 1.0rem 0;
+  }
+}
