@@ -41,9 +41,16 @@
 
 @media screen and (max-width: 1024px) {
 
-  #header .timetable {
-    justify-content: center;
-    margin-left: 5%;
+  #header {
+    .timetable {
+      justify-content: center;
+      margin-left: 5%;
+    }
+
+    .navigation-menu {
+      z-index: 1;
+      background-color: $body-bg-color;
+    }
   }
 }
 

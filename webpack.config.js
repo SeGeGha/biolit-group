@@ -28,9 +28,23 @@ const config = (env = {}) => {
 
   return {
     mode: isProd ? 'production' : 'development',
-    entry: ['./src/scss/index.scss'],
+    entry: ['./src/js/index.js', './src/scss/index.scss'],
+    output: {
+      path: path.join(__dirname, '/dist'),
+      filename: 'main.js',
+    },
     module: {
       rules: [{
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+        {
           test: /\.(png|jpg|gif|jpeg|ico|svg)$/,
           use: [{
             loader: 'file-loader',
