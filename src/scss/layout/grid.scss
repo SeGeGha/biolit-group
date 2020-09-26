@@ -2,8 +2,6 @@ $dot-size: 3px;
 
 .grid {
   width: 100%;
-  max-width: $desktop-content-max-width;
-  margin: 0 auto;
 
   @include flex(row, stretch, stretch, wrap);
 }
