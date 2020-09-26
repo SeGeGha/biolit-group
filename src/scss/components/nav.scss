@@ -1,0 +1,147 @@
+$line-width: 40px;
+$lineFirstColor: $light-text-color;
+$lineSecondColor: $main-text-color;
+$transition: all 0.3s;
+
+.navigation-group {
+  list-style: none;
+  font-size: 1.5rem;
+
+  @include flex(row, stretch, flex-start, wrap);
+
+  &__item {
+    display: inline-flex;
+
+    a {
+      padding: 1.8rem 1.55rem;
+    }
+  }
+}
+
+.item--hidden {
+  position: relative;
+  width: $line-width;
+  padding-top: 5.1rem;
+  font-size: 0;
+  cursor: pointer;
+
+  a {
+    padding: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 2.2rem;
+    left: 0.6rem;
+    background-color: $copyright-bg-color;
+    content: '';
+
+    @include size(100%, ($line-width * 0.1));
+  }
+
+  &::after {
+    top: 2.8rem;
+    width: 60%;
+  }
+}
+
+.item--actived {
+  color: $menu-link-active-color;
+}
+
+.item--underlined {
+  text-decoration: underline;
+}
+
+.navigation-btn {
+  display: none;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include size($line-width);
+
+  &__line,
+  &__line::after,
+  &__line::before {
+    background-color: $lineFirstColor;
+    border-radius: 10px;
+  }
+
+  &__line {
+    position: relative;
+    transition: $transition 0.5s;
+
+    @include size(100%, 16%);
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '';
+
+      @include size(100%);
+    }
+
+    &::after {
+      top: 250%;
+      transition: $transition 0.3s;
+    }
+
+    &::before {
+      top: 500%;
+      transition: $transition 0.1s;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .navigation-group {
+    display: none;
+  }
+
+  .navigation-btn {
+    display: block;
+  }
+
+  .navigation--actived {
+
+    .navigation-btn__line {
+      transition: $transition 0.1s;
+
+      @include size(100%);
+
+      &::after,
+      &::before {
+        top: 45%;
+        height: 16%;
+        background-color: $lineSecondColor;
+      }
+
+      &::after {
+        transition: $transition 0.3s;
+        transform: rotateZ(45deg);
+      }
+
+      &::before {
+        transition: $transition 0.5s;
+        transform: rotateZ(-45deg);
+      }
+    }
+
+    .navigation-group {
+
+      @include flex(column);
+
+      .item--hidden {
+        display: none;
+      }
+
+      &__item {
+        border-top: 1px solid $light-text-color;
+      }
+    }
+  }
+}

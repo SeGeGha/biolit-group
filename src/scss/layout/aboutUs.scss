@@ -1,0 +1,103 @@
+#about-us {
+  padding: 12.875rem 0 2.625rem;
+  background: url('../assets/img/apartment-apartment-building-architecture-building-323705.jpg') 0% 83.5%;
+
+  .text-container {
+    position: relative;
+    width: 40%;
+    margin-bottom: 6.8rem;
+    margin-left: 8.125rem;
+    padding: 1.975rem 0.625rem;
+
+    &__title {
+      margin-bottom: 1.35rem;
+    }
+
+    &__description {
+      font-size: 1.125rem;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0.625rem;
+      width: 35%;
+      border-bottom: 2px solid;
+      content: '';
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #about-us {
+    padding: 3rem 0;
+
+    .text-container {
+      width: 100%;
+      margin: 0 auto 3rem;
+      text-align: center;
+
+      &::after {
+        left: 32.5%;
+      }
+    }
+
+    .preeminence-group {
+      flex-direction: column;
+
+      &__item {
+        margin-right: 0;
+
+        &__icon {
+          float: none;
+        }
+
+        &__icon,
+        h4,
+        p {
+          margin: 0.5rem;
+          text-align: center;
+        }
+
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  #about-us {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  #about-us {
+    padding: 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #about-us {
+    padding-bottom: 0;
+
+
+
+    .text-container {
+      padding: 1.975rem 0;
+
+      &__description {
+        text-align: justify;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

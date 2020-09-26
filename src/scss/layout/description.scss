@@ -1,0 +1,28 @@
+#description {
+  padding: 3.575rem 0 4.94rem;
+
+  .inner-wrapper {
+    text-align: center;
+
+    >p {
+      display: inline-block;
+      width: 59%;
+      margin-top: 2.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  #description {
+    padding: 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #description .inner-wrapper>p {
+    width: 100%;
+    text-align: justify;
+  }
+}
